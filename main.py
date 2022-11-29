@@ -1,10 +1,13 @@
 from time import sleep
 
 def check_inp(hour):
-
-    if 59 >= hour[1] >= 0:
-        if 59 >= hour[2] >= 0:
-            return True
+    if hour[0] >= 0:
+        if 59 >= hour[1] >= 0:
+            if 59 >= hour[2] >= 0:
+                return True
+            else:
+                print("Invalid time format!!!")
+                return False
         else:
             print("Invalid time format!!!")
             return False
